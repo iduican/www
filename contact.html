@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhoneGap App Starter</title>
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+    <link rel="stylesheet" href="sasquach.css" />
+    <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-current.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <style>
+        .map
+        {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #6666dd;
+        }
+    </style>
+</head>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAiUzO1s6QWHuyzxx-JVN7ABSUL8-Cfeleqd6F6deqY-Cw1iTxhxQkovZkaxsxgKCdn1OCYaq7Ubz3SQ"
+    type="text/javascript"></script>
+<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=n2wY9mzV34Hsdslq6TJoeoJDLmAfzeBamSwJX7jBGLnjM7oDX7fU.Oe91KwUbOwqzvc-"></script>
+<script type="text/javascript">
+
+
+    var map;
+    var mapCenter;
+    var geocoder;
+    var fakeLatitude;
+    var fakeLongitude;
+
+    function initialize() {
+
+        if (navigator.geolocation) {
+
+
+            // Did we get the position correctly?
+            // alert (position.coords.latitude);
+
+            // To see everything available in the position.coords array:
+            // for (key in position.coords) {alert(key)}
+
+            mapServiceProvider(47.801255, -122.326057, document.getElementById("map-wa-west"));
+            mapServiceProvider(47.656138, -117.353725, document.getElementById("map-wa-east"));
+            mapServiceProvider(61.197146, -149.877721, document.getElementById("map-ak"));
+
+        }
+
+    }
+
+    function mapServiceProvider(latitude, longitude, divID) {
+        if (window.location.querystring['serviceProvider'] == 'Yahoo') {
+            mapThisYahoo(latitude, longitude);
+        }
+        else {
+            mapThisGoogle(latitude, longitude, divID);
+        }
+    }
+
+    function mapThisYahoo(latitude, longitude) {
+        var map = new YMap(document.getElementById('map'));
+        map.addTypeControl();
+        map.setMapType(YAHOO_MAP_REG);
+        map.drawZoomAndCenter(latitude + ',' + longitude, 3);
+
+        // add marker
+        var currentGeoPoint = new YGeoPoint(latitude, longitude);
+        map.addMarker(currentGeoPoint);
+
+        // Start up a new reverse geocoder for addresses?
+        // YAHOO Ajax/JS/Rest API does not yet support reverse geocoding (though they do support it via Actionscript... lame)
+        // So we'll have to use Google for the reverse geocoding anyway, though I've left this part of the script  just in case Yahoo! does support it and I'm not aware of it yet
+        geocoder = new GClientGeocoder();
+        geocoder.getLocations(latitude + ',' + longitude, addAddressToMap);
+    }
+
+    function mapThisGoogle(latitude, longitude, divID) {
+        var mapCenter = new GLatLng(latitude, longitude);
+        map = new GMap2(divID);
+        map.setCenter(mapCenter, 15);
+        map.addOverlay(new GMarker(mapCenter));
+
+        // Start up a new reverse geocoder for addresses?
+        geocoder = new GClientGeocoder();
+        geocoder.getLocations(latitude + ',' + longitude, addAddressToMap);
+    }
+
+    function addAddressToMap(response) {
+        if (!response || response.Status.code != 200) {
+            alert("Sorry, we were unable to geocode that address");
+        } else {
+            place = response.Placemark[0];
+            $('#address').html('Your address: ' + place.address);
+        }
+    }
+
+    window.location.querystring = (function () {
+
+        // by Chris O'Brien, prettycode.org
+        var collection = {};
+        var querystring = window.location.search;
+        if (!querystring) {
+            return { toString: function () { return ""; } };
+        }
+        querystring = decodeURI(querystring.substring(1));
+
+        var pairs = querystring.split("&");
+
+        for (var i = 0; i < pairs.length; i++) {
+
+            if (!pairs[i]) {
+                continue;
+            }
+            var seperatorPosition = pairs[i].indexOf("=");
+
+            if (seperatorPosition == -1) {
+                collection[pairs[i]] = "";
+            }
+            else {
+                collection[pairs[i].substring(0, seperatorPosition)]
+                        = pairs[i].substr(seperatorPosition + 1);
+            }
+        }
+
+        collection.toString = function () {
+            return "?" + querystring;
+        };
+
+        return collection;
+    })();
+
+</script>
+<body class="ui-mobile-viewport" onload="setTimeout('initialize()',500);">
+    <div data-role="page">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div data-role="header" data-theme="z" class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a href="index.html" data-ajax="false" data-role="button" data-icon="home" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h1>
+                Contact Us
+            </h1>
+            <p>
+                Benefit information, provider search assistance, and reimbursement accounts
+            </p>
+            <h2>
+                WA and other States</h2>
+            <a data-theme="b" data-role="button" href="tel:1-800-722-1471">1-800-722-1471</a>
+            <h2>
+                Alaska Only</h2>
+            <a data-theme="b" data-role="button" href="tel:1-800-508-4722">1-800-508-4722</a>
+            <h2>
+                Technical Help</h2>
+            <a data-theme="b" data-role="button" href="tel:1-800-722-9780">1-800-722-9780</a>
+            <h2>
+                Locations</h2>
+            <h3>
+                Mailing Address</h3>
+            <address>
+                PO Box 327<br />
+                Seattle, WA 98111-0327
+            </address>
+            <h3>
+                Western Washington</h3>
+            <p>
+                Open weekdays, 8AM to 5PM</p>
+            <address>
+                Premera Blue Cross<br />
+                7001 220th ST SW Building 1<br />
+                Mountlake Terrace, WA 98043
+            </address>
+            <div id="map-wa-west" class="map">
+            </div>
+            <h3>
+                Eastern Washington</h3>
+            <p>
+                Open weekdays, 8AM to 5PM</p>
+            <address>
+                Premera Blue Cross<br />
+                3900 East Sprague, Building 1<br />
+                Spokane, WA 99202
+            </address>
+            <div id="map-wa-east" class="map">
+            </div>
+            <h3>
+                Alaska</h3>
+            <p>
+                Open weekdays, 8AM to 4:30PM</p>
+            <address>
+                Premera Blue Cross Blue Shield of Alaska<br />
+                2550 Denali ST Suite 1404<br />
+                Anchorage, AK 99503
+            </address>
+            <div id="map-ak" class="map">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

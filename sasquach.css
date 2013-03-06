@@ -1,0 +1,26 @@
+
+
+img.main-image
+{
+    display: block;
+    margin-top: -15px;
+    width: 100%;
+}
+
+
+
+.ui-footer
+{
+    padding-top: 15px;
+    text-align: center;
+    width: 100%;
+    font-size: xx-small;
+}
+
+.logo-container
+{
+
+    text-align: center;
+    background-color: #003366;
+}
+

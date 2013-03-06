@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhoneGap App Starter</title>
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+    <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-current.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("backbutton", onBackButton, false);
+
+        function onDeviceReady() {
+            console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
+        }
+
+        function onBackButton() {
+            console.log("onBackButton");
+        }
+    </script>
+    <link rel="stylesheet" href="sasquach.css" />
+</head>
+<body class="ui-mobile-viewport">
+    <div data-role="page">
+        <div data-role="header" data-theme="z" class="logo-container" data-position="inline">
+            <img src="images/premera-name.png" alt="" />
+        </div>
+        <div data-role="content">
+            <!-- 
+                src="http://behance.vo.llnwd.net/profiles12/1318843/projects/6351953/a955432394cbc5f10c6a637e69ddf418.png"
+                -->
+            <img class="main-image" src="http://behance.vo.llnwd.net/profiles12/1318843/projects/6351953/f6d5b2caac374294be7d3d0b77251ab4.png"
+                alt="Peace of Mind" />
+            <ul data-role="listview">
+                <li data-role="list-divider">
+                    <h3>
+                        Welcome</h3>
+                </li>
+                <li><a href="login.html" data-ajax="false">Log In</a></li>
+                <li><a href="findadoctor.html" data-ajax="false">Find a Doctor</a></li>
+                <li><a href="contact.html" data-ajax="false">Contact Us</a></li>
+                <li><a href="discounts.html" data-ajax="false">Discounts</a></li>
+                <!--
+                <li><a href="newaccount.html" data-ajax="false">Create Account</a></li>
+                <li><a href="fundingaccounts.html" data-ajax="false">Funding Accounts</a></li>
+                <li><a href="careers.html" data-ajax="false">Careers</a></li>
+            
+            -->
+            </ul>
+        </div>
+        <div data-role="footer" data-include="footer" data-theme="d">
+            <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <a data-role="button" href="http://premerajobs.com">Careers</a> <a data-role="button"
+                    href="https://www.premera.com/">Full Site</a>
+            </div>
+            <p class="copyright">
+                Copyright &copy; 2013 Premera Blue Cross
+            </p>
+            <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <a href="https://www.premera.com/wa/visitor/terms-and-conditions/">Terms &amp; Conditions</a>
+                <a href="https://www.premera.com/wa/visitor/privacy-policy/">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

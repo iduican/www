@@ -1,0 +1,647 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhoneGap App Starter</title>
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+    <link rel="stylesheet" href="sasquach.css" />
+    <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-current.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("backbutton", onBackButton, false);
+
+        function onDeviceReady() {
+            console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
+        }
+
+        function onBackButton() {
+            console.log("onBackButton");
+        }
+    </script>
+</head>
+<body class="ui-mobile-viewport">
+    <div data-role="page">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a href="index.html" data-role="button" data-icon="home" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h1>
+                Extras!
+            </h1>
+            <h2>
+                Discounts for Premera Members</h2>
+            <div data-role="collapsible-set" data-content-theme="d" data-theme="b" data-role="collapsible-set">
+                <div data-role="collapsible" data-collapsed="true">
+                    <h3>
+                        Extras! Available to all Members</h3>
+                    <p>
+                        The following discounts are available to all our fantastic members</p>
+                    <b>Search Discounts</b>
+                    <ul data-role="listview" data-inset="true" data-filter="true">
+                        <li data-transition="flip" data-filtertext="fitness exercise lose weight"><a href="#curves">
+                            Curves</a></li>
+                        <li data-transition="flip" data-filtertext="fitness exercise lose weight"><a href="#studioonepilates">
+                            Studio One Pilates</a></li>
+                        <li data-transition="flip" data-filtertext="fitness exercise lose weight"><a href="#jennycraig">
+                            Jenny Craig</a></li>
+                        <li data-transition="flip" data-filtertext="fitness exercise lose weight"><a href="#thebestlife">
+                            The Best Life</a></li>
+                        <li data-transition="flip" data-filtertext="eyes eyecare glasses contacts"><a href="#davisvision">
+                            Davis Vision</a></li>
+                        <li data-transition="flip" data-filtertext="eyes eyecare glasses contacts"><a href="#eyemedeyeglasses">
+                            EyeMed Eyeglasses</a></li>
+                        <li data-transition="flip" data-filtertext="eyes eyecare glasses contacts"><a href="#truvisioncontactlenses">
+                            TruVision Contact Lenses</a></li>
+                        <li data-transition="flip" data-filtertext="eyes eyecare glasses contacts"><a href="#truvisionlaservisioncorrection">
+                            TruVision Laser Vision Correction</a></li>
+                        <li data-transition="flip" data-filtertext="kids baby babies"><a href="#newbornservicesandservices">
+                            Newborn Services &amp; Services</a></li>
+                        <li data-transition="flip" data-filtertext="kids baby babies"><a href="#safebeginningsfamilysafetyproducts">
+                            Safe Beginnings Family Safety Products</a></li>
+                    </ul>
+                </div>
+                <div data-role="collapsible" data-collapsed="true">
+                    <h3>
+                        Additional discounts available to our Members outside Alaska</h3>
+                    <p>
+                        Additional Extras! available to all Members outside Alaska State</p>
+                    <ul data-role="listview" data-inset="true">
+                        <li><a data-transition="flip" href="#alternativecareservices">Alternative Care Services</a></li>
+                        <li><a data-transition="flip" href="#lafitness">LA Fitness</a></li>
+                        <li><a data-transition="flip" href="#snapfitness">SNAP Fitness</a></li>
+                    </ul>
+                </div>
+                <div data-role="collapsible" data-collapsed="true">
+                    <h3>
+                        Additional discounts available to our Members outside Washington</h3>
+                    <p>
+                        Additional Extras! available to all Members outside Washington State</p>
+                    <ul data-role="listview" data-inset="true">
+                        <li><a data-transition="flip" href="#bodyrenewalaska">Body Renew Alaska</a></li>
+                        <li><a data-transition="flip" href="#beltonehearingaids">Beltone Hearing Aids</a></li>
+                        <li><a data-transition="flip" href="#hearpohearingaidsandhearingservices">HearPO Hearing
+                            Aids and Hearing Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================================================================= -->
+    <div data-role="page" id="curves">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Curves</h3>
+            <a data-theme="b" data-role="button" href="http://www.curves.com/" target="_blank">www.curves.com</a>
+            <p>
+                Curves Get 100% off the service fee; Premera Blue Cross members* pay only $44 per
+                month (Anchorage locations only).</p>
+            <p>
+                A complete cardio- and strength-training workout in just 30 minutes. Includes:</p>
+            <ul>
+                <li>Personalized coaching at no extra charge</li>
+                <li>Curves circuit and Zumba classes (requires purchase of a punch card)</li>
+                <li>Modified workout plan available due to health limitations</li>
+            </ul>
+            <p>
+                Visit Curves to learn more and save when you register.</p>
+            <p>
+                * Must show proof of insurance to your local club to receive discount.</p>
+        </div>
+    </div>
+    <div data-role="page" id="studioonepilates">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Studio One Pilates</h3>
+            <a data-theme="b" data-role="button" href="http://www.pilatesalaska.com/" target="_blank">
+                www.pilatesalaska.com</a>
+            <p>
+                Studio One Pilates (Not available in Washington) Get 100% off the enrollment fee
+                and 5% off a Getting Started Program</p>
+            <p>
+                Studio One Pilates specializes in teaching a style of structurally integrative Pilates.
+                Skills can be applied to any physical activity.</p>
+            <p>
+                For Premera Blue Cross members, Studio One Pilates offers:</p>
+            <ul>
+                <li>5% off any of three Getting Started programs</li>
+                <li>Two free group classes to use after your Getting Started program</li>
+                <li>No initiation fee</li>
+                <li>Total savings $34 to $48 (varies by selected program)</li>
+            </ul>
+            <p>
+                Studio One Pilates: <a data-theme="b" data-inline="true" data-role="button" href="tel:907-770-2639">
+                    907-770-2639</a></p>
+        </div>
+    </div>
+    <div data-role="page" id="jennycraig">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Jenny Craig</h3>
+            <a data-theme="b" data-role="button" href="http://www.JennyCraig.com/CorporateChannel/PBCEDP.aspx"
+                target="_blank">www.JennyCraig.com/CorporateChannel/PBCEDP.aspx</a>
+            <p>
+                Save on Jenny! Jenny Craig offers Premera members and their eligible dependents:</p>
+            <ul>
+                <li>Free 30-Day Program*</li>
+                <li>25% off a Premium Program*</li>
+            </ul>
+            <p>
+                We are all about eating well, moving more and living life! Plus we've got the science
+                to back it up! We've helped millions of people lose weight....are you next.</p>
+            <p>
+                To receive your special savings offer, visit Jenny Craig.com and get your coupon.
+                Print your coupon and bring it, along with your member ID, to your free consultation.</p>
+            <p>
+                Call <a data-theme="b" data-inline="true" data-role="button" href="tel:1-877-Jenny70">
+                    1-877-Jenny70</a> to find your nearest Jenny center or to learn about the Jenny
+                At Home program. Be sure to identify yourself as a Premera Blue Cross member.</p>
+            <p>
+                *Plus the cost of food. Plus the cost of shipping, if applicable. Offer applies
+                to initial membership fee only and is valid at participating centers in the U.S.,
+                Canada and Puerto Rico and through Jenny At Home. Each offer is a separate offer
+                and can be used only once per person. Restrictions apply. To qualify as an eligible
+                dependent, you must be age 18 or older and reside in the same household as the member.
+                To receive this special offer, you must have your special offer coupon in hand at
+                the time of purchase.</p>
+        </div>
+    </div>
+    <div data-role="page" id="thebestlife">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                The Best Life</h3>
+            <a data-theme="b" data-role="button" href="www.thebestlife.com/extras.php" target="_blank">
+                www.thebestlife.com/extras.php</a>
+            <p>
+                Award-winning diet and fitness plan from Oprah’s trainer, Bob Greene.</p>
+            <p>
+                With Premera Extras! discount offering you can get one month free when you sign
+                up for a 3-month plan.</p>
+            <p>
+                The Best Life is not a typical diet. You won't go on it and then off it. Instead,
+                this plan will help you gradually change your eating and exercise habits for life.
+                And unlike so many other diets, the Best Life plan is rooted in the idea that eating
+                is and always should be one of life's greatest pleasures. You can love food and
+                live happily while still meeting your weight-loss goals.</p>
+            <p>
+                As a Best Life member, you’ll get:</p>
+            <ul>
+                <li>Customized daily meals plans based on your calorie and nutrient needs, as well as
+                    your food preferences</li>
+                <li>Simple logging tools and weekly reports to track food, exercise, weight and emotional
+                    health</li>
+                <li>An extensive article and video library covering a wide variety of topics to help
+                    you live your best life</li>
+                <li>An extensive article and video library covering a wide variety of topics to help
+                    you live your best life </li>
+                <li>eNewsletters with current nutrition, exercise and health information, plus promotional
+                    offers, savings and giveaways </li>
+                <li>Loads of support from our team of experts and our thriving member community
+                </li>
+            </ul>
+            <p>
+                To receive your $10 discount on your 3 month program, visit TheBestLife.com/extras</p>
+        </div>
+    </div>
+    <div data-role="page" id="davisvision">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Davis Vision</h3>
+            <a data-theme="b" data-role="button" href="https://idoc.davisvision.com/davis/sharedfiles/memberhandoff.asp?GroupMember=7335&Group=XC4&DestinationURL=/davis/member/member_menu.asp"
+                target="_blank">idoc.davisvision.com/davis/sharedfiles/memberhandoff.asp?GroupMember=7335&Group=XC4&DestinationURL=/davis/member/member_menu.asp
+            </a>
+            <p>
+                One of the nation’s leading vision benefits companies, Davis Vision offers Premera
+                Blue Cross members with substantial savings on:</p>
+            <ul>
+                <li>Eye Examinations: 15% off provider’s usual and customary charge</li>
+                <li>Eyeglasses: Fixed-fee member discounted pricing with verifiable savings. Typical
+                    savings of 10% to 60% off average retail prices for lens options</li>
+                <li>Contact Lens Evaluation: 15% off provider’s usual and customary charge</li>
+                <li>Contact Lenses: 10-20% off provider’s usual and customary charge</li>
+                <li>The discount also offers significant discounts on replacement contact lenses and
+                    Laser Vision Correction at no additional cost.</li>
+            </ul>
+            <ul>
+                <li>Free membership to Lens 123® Replacement Contact Lenses by Mail</li>
+                <li>The fastest, easiest and most convenient way to buy replacement contact lenses.
+                    If you find a lower price, Lens123 will match it – guaranteed! Call <a data-theme="b"
+                        data-inline="true" data-role="button" href="tel:1-800-LENS123">1-800-LENS123</a>
+                    or visit lens123.com with your current prescription</li>
+                <li>Laser Vision Correction Discounts</li>
+                <li>Up to 25% off of Provider’s U&C or an additional 5% off of an advertised special
+                    – whichever is lower</li>
+                <li>Learn how you can start saving on your vision care needs. Visit Davis Vision's Member
+                    website and enter 7335 in the Client Code field of the Open Enrollment section,
+                    or simply go to Davis Vision Discount Information. You may also contact us at <a
+                        data-theme="b" data-inline="true" data-role="button" href="tel:1-800-443-5981">1-800-443-5981</a>.</li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="page" id="eyemedeyeglasses">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                EyeMed Eyeglasses</h3>
+            <a data-theme="b" data-role="button" href="http://portal.eyemedvisioncare.com/wps/portal/emweb"
+                target="_blank">portal.eyemedvisioncare.com/wps/portal/emweb</a>
+            <p>
+                Save up to 45% on eyeglasses at EyeMed’s contracted provider locations, including
+                LensCrafters, Pearle Vision Centers, Sears Optical, JCPenney Optical and other independent
+                providers. <a data-theme="b" data-inline="true" data-role="button" href="tel:866-559-5252">
+                    866-559-5252</a>
+            </p>
+            <a data-theme="b" data-role="button" href="http://www.eyemedvisioncare.com/memweb/ProviderLocator?ClientId=PremeraAC"
+                target="_blank">EyeMed Provider Locator</a>
+        </div>
+    </div>
+    <div data-role="page" id="truvisioncontactlenses">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                TruVision Contact Lenses</h3>
+            <a data-theme="b" data-role="button" href="http://www.truvision.com" target="_blank">
+                www.truvision.com</a>
+            <p>
+                Get an additional 10% off on your contact lenses! Enter promo code <b>PREMERA10</b>
+                at checkout.</p>
+            <ul>
+                <li>We guarantee that we will beat any competitor’s price by 105%</li>
+                <li>Contact lenses delivered to your home in five to eight business days</li>
+                <li>FREE standard shipping on orders of $99 or more</li></ul>
+            <p>
+                TruVision has partnered with <a data-theme="b" data-inline="true" data-role="button"
+                    href="http://www.visiondirect.com/lens/default.asp?catid=27087&amp;aid=337939"
+                    target="_blank">Vision Direct</a> for your contact needs. Vision Direct carries
+                the top brands at low prices while providing the convenience of shipping your contacts
+                directly to you.</p>
+            <ul>
+                <li><a data-theme="b" data-inline="true" data-role="button" href="tel:877-762-2020">
+                    877-762-2020</a> for more information</li>
+                <li>Visit <a data-theme="b" data-role="button" data-inline="true" href="http://www.visiondirect.com/lens/default.asp?catid=27087&amp;aid=337939"
+                    target="_blank">VisionDirect.com</a> to place your order or call</li>
+                <li><a data-theme="b" data-inline="true" data-role="button" href="tel:866-831-8497">
+                    866-831-8497</a> to learn more about the ordering process</li></ul>
+        </div>
+    </div>
+    <div data-role="page" id="truvisionlaservisioncorrection">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                TruVision Laser Vision Correction</h3>
+            <a data-theme="b" data-role="button" href="http://www.truvision.com" target="_blank">
+                www.truvision.com</a>
+            <p>
+                Laser vision correction starting at $895 per eye throughout the United States (subject
+                to availability)</p>
+            <ul>
+                <li>Custom laser vision correction costs $400 to $500 more per eye</li>
+                <li>Lifetime enhancement warranty program</li></ul>
+            <p />
+            <ul>
+                <li><a data-theme="b" data-inline="true" data-role="button" href="tel:877-762-2020">
+                    877-762-2020</a> or visit <a data-theme="b" data-inline="true" data-role="button"
+                        href="http://www.truvision.com/" target="_blank">TruVision.com</a></li></ul>
+        </div>
+    </div>
+    <div data-role="page" id="alternativecareservices">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Alternative Care Services</h3>
+            <p>
+                Alternative Care Services 10% to 30% off
+            </p>
+            <p>
+                Save 10% to 30% on non-covered alternative care services from providers participating
+                in the Premera Discount program.</p>
+            <p>
+                Use our Find a Doctor feature for easy access to a network of contracted and credentialed
+                alternative care providers in Washington.</p>
+            <h4>
+                Alternative Care Services Disciplines</h4>
+            <p>
+                The discount is applicable to the following professional services when performed
+                by participating practitioners:</p>
+            <ul>
+                <li>Chiropractic: Discounts apply to all chiropractic services.</li>
+                <li>Licensed Acupuncturists: Discounts include all non-covered professional acupuncturist
+                    services.</li>
+                <li>Licensed Massage Therapists: Discount includes all non-covered professional massage
+                    therapy services.</li>
+                <li>Naturopathic Physicians: Discount includes non-covered services such as wellness
+                    visits, consultations, and physical medicine treatments.</li>
+                <li>Dietetic and nutrition services</li>
+            </ul>
+            <p>
+                How to Use the Discount</p>
+            <ul>
+                <li>Call your selected practitioner to make an appointment. Let the practitioner know
+                    you want to use the Extras! Discount and describe which scenario applies to you:</li>
+                <li>Services are not covered under your medical plan (e.g. massage therapy)</li>
+                <li>Services are covered under your medical plan, but you’ve exceeded your maximum benefit
+                    coverage (e.g. you’ve reached your allowed dollar limit for the year and want to
+                    continue services)</li>
+                <li>Present your plan ID card at the time of your appointment.</li>
+                <li>Pay less with the Extras! Alternative Care Services discount program. Pay the provider’s
+                    billed charges, less the program discount. You are responsible for the cost of all
+                    services and products that you receive from a participating practitioner through
+                    this program.</li>
+            </ul>
+            <p>
+                Please note: Discounts apply immediately to complementary and alternative provider
+                services that are not covered by your health plan.</p>
+        </div>
+    </div>
+    <div data-role="page" id="newbornservicesandservices">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Newborn Services & Products</h3>
+            <a data-theme="b" data-role="button" href="http://www.corcell.com/insurance-partners/premera-blue-cross/"
+                target="_blank">www.corcell.com/insurance-partners/premera-blue-cross</a> <a data-theme="b"
+                    data-inline="true" data-role="button" href="tel:888-882-2673">888-882-2673</a>
+            <p>
+                Discount: Save $350 off Umbilical Cord Blood Banking Enrollment Fee or $100 offAfford-A-Cord™
+                Program Enrollment Fee</p>
+            <h4>
+                Cord Blood Saves Lives</h4>
+            <p>
+                The five minutes it takes to save a child's umbilical cord blood could prove to
+                be a once in a lifetime opportunity to protect your child from a growing number
+                of life threatening diseases.</p>
+            <p>
+                Cord blood stem cells are now being used to treat more than 70 diseases with many
+                more on the horizon. Sadly, cord blood is often discarded at birth and lost forever.
+                But now, like so many new parents, you can safely store it for the unexpected.</p>
+            <p>
+                In addition, you can give the gift of cord blood preservation to your child, grandchild,
+                niece, nephew, friend or other loved one.</p>
+            <p>
+                For more information about cord blood banking visit <a data-theme="b" data-inline="true"
+                    data-role="button" href="http://www.corcell.com/insurance-partners/premera-blue-cross/"
+                    target="_blank">www.corcell.com/insurance-partners/premera-blue-cross</a> or
+                call <a data-theme="b" data-inline="true" data-role="button" href="tel:888-882-2673">
+                    888-882-2673</a>.</p>
+        </div>
+    </div>
+    <div data-role="page" id="safebeginningsfamilysafetyproducts">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Safe Beginnings Family Safety Products</h3>
+            <a data-theme="b" data-role="button" href="http://www.safebeginnings.com/" target="_blank">
+                www.safebeginnings.com</a>
+            <p>
+                Save 15% on safety products for your child and home.</p>
+            <p>
+                Visit <a data-theme="b" data-inline="true" data-role="button" href="http://www.safebeginnings.com/"
+                    target="_blank">Safebeginnings.com</a> or call <a data-theme="b" data-inline="true"
+                        data-role="button" href="tel:1-800-598-8911">1-800-598-8911</a> to request
+                a catalog.</p>
+            <p>
+                Your group code coupon is: PBC.</p>
+        </div>
+    </div>
+    <div data-role="page" id="lafitness">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                LA Fitness (Not available in Alaska)</h3>
+            <a data-theme="b" data-role="button" href="https://www.lafitness.com/" target="_blank">
+                LA Fitness</a>
+            <p>
+                We are pleased to offer a discounted membership through Premera Company and LA Fitness!</p>
+            <p>
+                Join online through this offer until March 10, 2013 and receive a $0 initiation
+                and $29.99 monthly dues per person for you and your family members*.</p>
+            <p>
+                With your membership you will enjoy the following amenities:</p>
+            <ul>
+                <li>Finest strength and cardio equipment</li>
+                <li>Strength and free-weight centers</li>
+                <li>Unlimited Group Fitness Classes</li>
+                <li>Personal Training**</li>
+                <li>Pool, Sauna, and Aqua Fitness classes**</li>
+                <li>Basketball and Volleyball**</li>
+                <li>Racquetball**</li>
+                <li>Sports Leagues**</li>
+                <li>Kids Klub Babysitting**</li>
+                <li>Juice Bars**</li>
+            </ul>
+            <p>
+                **Amenities and classes may vary from club to club; extra charge for some amenities.
+                Family members must live at the same address as the employee and family memberships
+                must be paid for with the same account as the employee membership.</p>
+            <p>
+                Membership includes access to all LA Fitness clubs within your home state excluding
+                Signature Clubs. Membership not available in New York.</p>
+        </div>
+    </div>
+    <div data-role="page" id="snapfitness">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                SNAP Fitness (Not available in Alaska)</h3>
+            <a data-theme="b" data-role="button" href="http://www.snapfitness.com/premera" target="_blank">
+                www.snapfitness.com/premera</a>
+            <p>
+                Snap Fitness offers 24/7 access to all of our 1,200 locations worldwide. Get 100%
+                off enrollment fee; 5% off monthly dues.</p>
+            <ul>
+                <li>Visit our website</li>
+                <li>Type in your zip code and click “Go.”</li>
+                <li>Select a club and click the “Join Now” button for details on your membership.*</li>
+            </ul>
+            <p>
+                *Global Access Security Fee is applied to all memberships.</p>
+        </div>
+    </div>
+    <div data-role="page" id="bodyrenewalaska">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Body Renew Alaska (Not available in Washington)</h3>
+            <a data-theme="b" data-role="button" href="http://www.bodyrenewalaska.com" target="_blank">
+                www.bodyrenewalaska.com</a>
+            <p>
+                Discounted membership through Premera Blue Cross and Body Renew!</p>
+            <p>
+                You receive the “Keep Fit Plus” program for $24 per month (normally priced at $74
+                a month).</p>
+            <p>
+                Body Renew is Alaska's premiere weight loss and fitness studio. Rather than giving
+                you 'just a gym', or a strict diet, we’ve created a weight loss and fitness solution
+                that is driven by our results-based programming for the individual. Our programs
+                incorporate nutrition coaching and workout sessions with your Fit Pro that are as
+                FUN as they are effective.</p>
+            <p>
+                With your membership:</p>
+            <ul>
+                <li>Free member assessment /orientation </li>
+                <li>Free 60 day fitness re-evaluation</li>
+                <li>Unlimited access to 30 minutes express classes</li>
+                <li>Unlimited boot camp access at all locations and times</li>
+                <li>Ten, 3-day guest passes</li>
+                <li>24hr access to all Body Renewal locations </li>
+            </ul>
+            <p>
+                Please note: This offer is good for all family members in the same household and
+                does not include $15 enrollment fee.</p>
+        </div>
+    </div>
+    <div data-role="page" id="beltonehearingaids">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                Beltone Hearing Aids (Not available in Alaska)</h3>
+            <p>
+                Save 25% on all Beltone hearing aids.</p>
+            <p>
+                Discount applies to:</p>
+            <ul>
+                <li>Free hearing screening</li>
+                <li>Warranty including coverage for loss, theft or damage</li>
+                <li>One-year supply of batteries</li>
+                <li>Lifetime cleaning and checking of your Beltone hearing aid product at any of Beltone’s
+                    more than 1,250 U.S. locations</li>
+            </ul>
+            <p>
+                Call <a data-theme="b" data-inline="true" data-role="button" href="tel:1-800-235-8663">
+                    1-800-235-8663</a> to find a Beltone location near you and to schedule an appointment
+                for your free screening.</p>
+        </div>
+    </div>
+    <div data-role="page" id="hearpohearingaidsandhearingservices">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a data-rel="back" data-role="button" data-icon="back" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h3>
+                HearPO Hearing Aids and Hearing Services (Not available in Alaska)</h3>
+            <a data-theme="b" data-role="button" href="http://www.hearpo.com/" target="_blank">www.hearpo.com</a>
+            <p>
+                We’ll beat any other local provider’s price by 5%. Plus, you will receive a 30%
+                discount off of diagnostic services.</p>
+            <ul>
+                <li>Choose from over 1,000 hearing aid models</li>
+                <li>3-Year Warranty on most hearing aids, covering repairs, loss and damage.**</li>
+                <li>60-day no-risk trial period – 100% refund if you’re not satisfied.</li>
+                <li>Free hearing aid batteries – One year supply mailed directly to your home (maximum
+                    of 80 calls per hearing aid).</li></ul>
+            <a data-theme="b" data-inline="true" data-role="button" href="tel:1-888-659-7107">888-659-7107</a>
+            <p>
+                *Competitor coupon required. Limited to manufacturers offered through the HearPO
+                program. Local provider quotes only will be matched.</p>
+            <p>
+                ** Some exclusions apply. Limited to one-time claim for loss and damage.</p>
+        </div>
+    </div>
+</body>
+</html>

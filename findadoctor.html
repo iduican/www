@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhoneGap App Starter</title>
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+    <link rel="stylesheet" href="sasquach.css" />
+    <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-current.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("backbutton", onBackButton, false);
+
+        function onDeviceReady() {
+            console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
+        }
+
+        function onBackButton() {
+            console.log("onBackButton");
+        }
+    </script>
+</head>
+<body class="ui-mobile-viewport">
+    <div data-role="page">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div data-role="header" data-theme="z" class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a href="index.html" data-ajax="false" data-role="button" data-icon="home" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h1>
+                Find a Doctor</h1>
+            <p>Search for healthcare providers, hospitals and clinics using our directory</p>
+            <p>A browser will launch Find a Doctor in a new window.</p>
+            <a data-role="button" data-theme="b" rel="external" href="https://m.epd.adis-glb.com/Pages/Menu.aspx">Find a Doctor</a>
+
+        </div>
+
+    </div>
+</body>
+</html>
+
